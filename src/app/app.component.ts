@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rpg-app';
+
+  throwDice(numberOfDice: number, sides: number) {
+    const results = [];
+
+    for (let i = 0; i < numberOfDice; i++) {
+      results.push(Math.floor(Math.random() * sides));
+    }
+    
+    console.log(results);
+  
+    // return results;
+  }
 }
