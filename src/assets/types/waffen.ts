@@ -1,4 +1,4 @@
-interface nahkampfwaffe {
+export interface nahkampfwaffe {
     name: string;
     at: string;
     pa?: string;
@@ -6,7 +6,7 @@ interface nahkampfwaffe {
     rw: string;
 }
 
-interface fernkampfwaffe {
+export interface fernkampfwaffe {
     name: string;
     fk: number;
     lz: number;

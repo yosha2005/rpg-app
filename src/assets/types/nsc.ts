@@ -1,4 +1,6 @@
-interface nsc {
+import { nahkampfwaffe, fernkampfwaffe } from "./waffen";
+
+export interface nsc {
     name: string;
 
     // Eigenschaften
