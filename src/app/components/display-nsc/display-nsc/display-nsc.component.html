@@ -1,4 +1,6 @@
-<p>{{nsc.name}}</p>
+<h2>{{nsc.name}}</h2>
+
+<h3>Eigenschaften</h3>
 <table>
     <tr>
         <th>MU</th>
@@ -19,5 +21,85 @@
         <td>{{nsc.ge}}</td>
         <td>{{nsc.ko}}</td>
         <td>{{nsc.kk}}</td>
+    </tr>
+</table>
+
+<h3>Charakterwerte</h3>
+<table>
+    <tr>
+        <th>LeP</th>
+        <th>AsP</th>
+        <th>KaP</th>
+        <th>INI</th>
+        <th>RS</th>
+        <th>BE</th>
+        <th>SK</th>
+        <th>ZK</th>
+        <th>GS</th>
+        <th>AW</th>
+    </tr>
+    <tr>
+        <td>{{nsc.lep}}</td>
+        <td>{{nsc.asp}}</td>
+        <td>{{nsc.kap}}</td>
+        <td>{{nsc.ini}}</td>
+        <td>{{nsc.rs}}</td>
+        <td>{{nsc.be}}</td>
+        <td>{{nsc.sk}}</td>
+        <td>{{nsc.zk}}</td>
+        <td>{{nsc.gs}}</td>
+        <td>{{nsc.aw}}</td>
+    </tr>
+</table>
+
+
+<div *ngIf="nsc.nahkampfwaffen.length !== 0">
+    <h3>Nahkampfwaffen</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>AT</th>
+            <th>PA</th>
+            <th>TP</th>
+            <th>RW</th>
+        </tr>
+        <tr *ngFor="let waffe of nsc.nahkampfwaffen">
+            <td>{{waffe.name}}</td>
+            <td>{{waffe.at}}</td>
+            <td>{{waffe.pa}}</td>
+            <td>{{waffe.tp}}</td>
+            <td>{{waffe.rw}}</td>
+        </tr>
+    </table>
+</div>
+
+<div *ngIf="nsc.fernkampfwaffen.length !== 0">
+    <h3>Fernkampfwaffen</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>FK</th>
+            <th>LZ</th>
+            <th>TP</th>
+            <th>RW</th>
+        </tr>
+        <tr *ngFor="let waffe of nsc.fernkampfwaffen">
+            <td>{{waffe.name}}</td>
+            <td>{{waffe.fk}}</td>
+            <td>{{waffe.lz}}</td>
+            <td>{{waffe.tp}}</td>
+            <td>{{waffe.rw}}</td>
+        </tr>
+    </table>
+</div>
+
+<table>
+    <tr>
+        <th>Aktionen</th>
+        <td>{{nsc.aktionen}}</td>
+    </tr>
+    <tr>
+        <th>Größe</th>
+        <td>{{nsc.groesse}}</td>
     </tr>
 </table>
