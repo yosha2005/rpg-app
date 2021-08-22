@@ -13,14 +13,14 @@
         <th>KK</th>
     </tr>
     <tr>
-        <td>{{nsc.mu}}</td>
-        <td>{{nsc.kl}}</td>
-        <td>{{nsc.in}}</td>
-        <td>{{nsc.ch}}</td>
-        <td>{{nsc.ff}}</td>
-        <td>{{nsc.ge}}</td>
-        <td>{{nsc.ko}}</td>
-        <td>{{nsc.kk}}</td>
+        <td>{{nsc?.mu}}</td>
+        <td>{{nsc?.kl}}</td>
+        <td>{{nsc?.in}}</td>
+        <td>{{nsc?.ch}}</td>
+        <td>{{nsc?.ff}}</td>
+        <td>{{nsc?.ge}}</td>
+        <td>{{nsc?.ko}}</td>
+        <td>{{nsc?.kk}}</td>
     </tr>
 </table>
 
@@ -39,21 +39,21 @@
         <th>AW</th>
     </tr>
     <tr>
-        <td>{{nsc.lep}}</td>
-        <td>{{nsc.asp}}</td>
-        <td>{{nsc.kap}}</td>
-        <td>{{nsc.ini}}</td>
-        <td>{{nsc.rs}}</td>
-        <td>{{nsc.be}}</td>
-        <td>{{nsc.sk}}</td>
-        <td>{{nsc.zk}}</td>
-        <td>{{nsc.gs}}</td>
-        <td>{{nsc.aw}}</td>
+        <td>{{nsc?.lep}}</td>
+        <td>{{nsc?.asp}}</td>
+        <td>{{nsc?.kap}}</td>
+        <td>{{nsc?.ini}}</td>
+        <td>{{nsc?.rs}}</td>
+        <td>{{nsc?.be}}</td>
+        <td>{{nsc?.sk}}</td>
+        <td>{{nsc?.zk}}</td>
+        <td>{{nsc?.gs}}</td>
+        <td>{{nsc?.aw}}</td>
     </tr>
 </table>
 
 
-<div *ngIf="nsc.nahkampfwaffen.length !== 0">
+<div *ngIf="nsc.nahkampfwaffen?.length !== 0">
     <h3>Nahkampfwaffen</h3>
     <table>
         <tr>
@@ -73,7 +73,7 @@
     </table>
 </div>
 
-<div *ngIf="nsc.fernkampfwaffen.length !== 0">
+<div *ngIf="nsc.fernkampfwaffen?.length !== 0">
     <h3>Fernkampfwaffen</h3>
     <table>
         <tr>
