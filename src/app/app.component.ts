@@ -1,4 +1,7 @@
+// TODO: create dice service
+
 import { Component, OnInit } from '@angular/core';
+import { DiceService } from './services/dice.service';
 import { GetJsonService } from './services/get-json.service';
 
 import { nsc } from '../assets/types/nsc';
@@ -13,23 +16,18 @@ export class AppComponent implements OnInit {
 
   buergerin = <nsc>{};
 
-  constructor(private getJson: GetJsonService) {};
+  constructor(
+    private getJson: GetJsonService,
+    private dice: DiceService
+  ) {};
 
   ngOnInit() {
     this.getJson.getNsc('buergerin').subscribe(results => this.buergerin = Object.assign(this.buergerin, results));
   }
 
   throwDice(numberOfDice: number, sides: number) {
-    const results = [];
-
-    for (let i = 0; i < numberOfDice; i++) {
-      results.push(Math.floor(Math.random() * sides));
-    }
+    const results = this.dice.roll(numberOfDice, sides);
     
     console.log(results);
-    console.log(this.buergerin);
-    
-  
-    // return results;
   }
 }

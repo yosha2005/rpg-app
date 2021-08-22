@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { GetJsonService } from "./services/get-json.service";
+import { DiceService } from './services/dice.service';
 import { DisplayNscComponent } from './components/display-nsc/display-nsc.component';
 
 @NgModule({
@@ -18,7 +19,7 @@ import { DisplayNscComponent } from './components/display-nsc/display-nsc.compon
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [GetJsonService],
+  providers: [GetJsonService, DiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
