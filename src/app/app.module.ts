@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { GetJsonService } from "./services/get-json.service";
+import { DisplayNscComponent } from './components/display-nsc/display-nsc/display-nsc.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DisplayNscComponent
   ],
   imports: [
     BrowserModule,
