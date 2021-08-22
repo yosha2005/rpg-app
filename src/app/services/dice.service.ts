@@ -16,4 +16,8 @@ export class DiceService {
 
     return results;
   }
+
+  modifiedRoll(numberOfDice: number, sides: number, modifier: number) {
+    return this.roll(numberOfDice, sides).forEach(el => el += modifier);
+  }
 }
