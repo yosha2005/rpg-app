@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { DiceService } from './services/dice.service';
 import { GetJsonService } from './services/get-json.service';
 
-import { nsc } from '../assets/types/nsc';
+import { NSC } from '../assets/types/nsc';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import { nsc } from '../assets/types/nsc';
 export class AppComponent implements OnInit {
   title = 'rpg-app';
 
-  buergerin = <nsc>{};
+  buergerin = <NSC>{};
 
   constructor(
     private getJson: GetJsonService,

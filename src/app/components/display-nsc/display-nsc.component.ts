@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { DiceService } from 'src/app/services/dice.service';
 import { CommonChecksService } from 'src/app/services/common-checks.service';
 
-import { nsc } from 'src/assets/types/nsc';
+import { NSC } from 'src/assets/types/nsc';
 
 @Component({
   selector: 'app-display-nsc',
@@ -11,7 +11,7 @@ import { nsc } from 'src/assets/types/nsc';
   styleUrls: ['./display-nsc.component.scss']
 })
 export class DisplayNscComponent {
-  @Input() nsc = <nsc>{};
+  @Input() nsc = <NSC>{};
 
   constructor(
     private dice: DiceService,
