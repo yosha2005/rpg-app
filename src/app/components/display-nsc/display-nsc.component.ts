@@ -19,6 +19,10 @@ export class DisplayNscComponent {
 
     if (at >= result[0]) {
       console.log('Attacke erfolgreich');
+<<<<<<< HEAD
+=======
+      // TODO: create sum of dice results
+>>>>>>> 47e268889e3ec6d496d9875135629dc66a7ecfa6
 
       let trefferpunkte = 0;
       this.dice.roll(tp[0], tp[1]).forEach(el => trefferpunkte += el);
