@@ -71,8 +71,8 @@
             <td>{{waffe.pa}}</td>
             <td>{{waffe.tp}}</td>
             <td>{{waffe.rw}}</td>
-            <td><button (click)="rollAttack(waffe.at, waffe.tp)">AT</button></td>
-            <td><button (click)="rollParry(waffe.pa)">PA</button></td>
+            <td><button (click)="attack(waffe.at, waffe.tp)">AT</button></td>
+            <td><button (click)="parry(waffe.pa)">PA</button></td>
         </tr>
     </table>
 </div>
@@ -94,7 +94,7 @@
             <td>{{waffe.lz}}</td>
             <td>{{waffe.tp}}</td>
             <td>{{waffe.rw}}</td>
-            <td><button (click)="rollAttack(waffe.fk, waffe.tp)">AT</button></td>
+            <td><button (click)="attack(waffe.fk, waffe.tp)">AT</button></td>
         </tr>
     </table>
 </div>

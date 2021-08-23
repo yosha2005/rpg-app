@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { DiceService } from 'src/app/services/dice.service';
+import { CommonChecksService } from 'src/app/services/common-checks.service';
 
 import { nsc } from 'src/assets/types/nsc';
 
@@ -12,34 +13,16 @@ import { nsc } from 'src/assets/types/nsc';
 export class DisplayNscComponent {
   @Input() nsc = <nsc>{};
 
-  constructor(private dice: DiceService) { }
+  constructor(
+    private dice: DiceService,
+    private check: CommonChecksService
+  ) { }
 
-  rollAttack(at: number | any, tp: number[]) {
-    const result = this.dice.roll(1, 20);
-
-    if (at >= result[0]) {
-      console.log('Attacke erfolgreich');
-<<<<<<< HEAD
-=======
-      // TODO: create sum of dice results
->>>>>>> 47e268889e3ec6d496d9875135629dc66a7ecfa6
-
-      let trefferpunkte = 0;
-      this.dice.roll(tp[0], tp[1]).forEach(el => trefferpunkte += el);
-      trefferpunkte += tp[2];
-      console.log('TP: ' + trefferpunkte);
-    } else {
-      console.log('Attacke fehlgeschlagen');
-    }
+  attack(at: number | any, tp: number[]) {
+    this.check.attack(at, tp);
   }
 
-  rollParry(pa: number | any) {
-    const result = this.dice.roll(1, 20);
-
-    if (pa >= result[0]) {
-      console.log('Parade erfolgreich');
-    } else {
-      console.log('Parade fehlgeschlagen');
-    }
+  parry(pa: number | any) {
+    this.check.parry(pa);
   }
 }
