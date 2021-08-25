@@ -24,10 +24,4 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getJson.getNsc('buergerin').subscribe(results => this.buergerin = Object.assign(this.buergerin, results));
   }
-
-  throwDice(numberOfDice: number, sides: number) {
-    const results = this.dice.roll(numberOfDice, sides);
-    
-    console.log(results);
-  }
 }
