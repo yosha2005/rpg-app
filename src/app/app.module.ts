@@ -11,11 +11,13 @@ import { DiceService } from './services/dice.service';
 import { CommonChecksService } from './services/common-checks.service';
 
 import { DisplayNscComponent } from './components/display-nsc/display-nsc.component';
+import { GameConsoleComponent } from './components/game-console/game-console.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayNscComponent
+    DisplayNscComponent,
+    GameConsoleComponent
   ],
   imports: [
     BrowserModule,
