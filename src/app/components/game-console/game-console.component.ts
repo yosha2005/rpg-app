@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-game-console',
   templateUrl: './game-console.component.html',
   styleUrls: ['./game-console.component.scss']
 })
-export class GameConsoleComponent implements OnInit {
+export class GameConsoleComponent {
+  consoleEntries = ['Affe', 'Banane', 'Chimäre'];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
