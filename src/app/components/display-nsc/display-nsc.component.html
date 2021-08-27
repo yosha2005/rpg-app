@@ -69,7 +69,7 @@
             <td>{{waffe.name}}</td>
             <td>{{waffe.at}}</td>
             <td>{{waffe.pa}}</td>
-            <td>{{waffe.tp}}</td>
+            <td>{{waffe.tp | formatDiceArray}}</td>
             <td>{{waffe.rw}}</td>
             <td><button (click)="attack(waffe.at, waffe.tp)">AT</button></td>
             <td><button (click)="parry(waffe.pa)">PA</button></td>
@@ -92,7 +92,7 @@
             <td>{{waffe.name}}</td>
             <td>{{waffe.fk}}</td>
             <td>{{waffe.lz}}</td>
-            <td>{{waffe.tp}}</td>
+            <td>{{waffe.tp | formatDiceArray}}</td>
             <td>{{waffe.rw}}</td>
             <td><button (click)="attack(waffe.fk, waffe.tp)">AT</button></td>
         </tr>
