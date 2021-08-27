@@ -25,7 +25,7 @@
         {"name": "Waffenlos", "at": 10, "pa": 6, "tp": [1, 6, 0], "rw": "kurz"},
         {"name": "Dolch", "at": 9, "pa": 5, "tp": [1, 6, 1], "rw": "kurz"},
         {"name": "Knüppel", "at": 7, "pa": 2, "tp": [1, 6, 2], "rw": "mittel"},
-        {"name": "Messer", "at": 9, "pa": 3, "tp": [1, 6, 1], "rw": "kurz"}
+        {"name": "Messer", "at": 9, "pa": 3, "tp": [2, 6, -1], "rw": "kurz"}
     ],
     "fernkampfwaffen": [],
 
