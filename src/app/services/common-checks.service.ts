@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ConsoleService } from './console.service';
 import { DiceService } from './dice.service';
 
 @Injectable({
@@ -6,20 +7,23 @@ import { DiceService } from './dice.service';
 })
 export class CommonChecksService {
 
-  constructor(private dice: DiceService) { }
+  constructor(
+    private dice: DiceService,
+    private gc: ConsoleService
+  ) { }
 
   attack(at: number | any, tp: number[]) {
     const result = this.dice.roll(1, 20);
 
     if (at >= result[0]) {
-      console.log('Attacke erfolgreich');
+      this.gc.print('Attacke erfolgreich');
 
       let trefferpunkte = 0;
       this.dice.roll(tp[0], tp[1]).forEach(el => trefferpunkte += el);
       trefferpunkte += tp[2];
-      console.log('TP: ' + trefferpunkte);
+      this.gc.print(String('TP: ' + trefferpunkte));
     } else {
-      console.log('Attacke fehlgeschlagen');
+      this.gc.print('Attacke fehlgeschlagen');
     }
   }
 
@@ -27,9 +31,9 @@ export class CommonChecksService {
     const result = this.dice.roll(1, 20);
 
     if (pa >= result[0]) {
-      console.log('Parade erfolgreich');
+      this.gc.print('Parade erfolgreich');
     } else {
-      console.log('Parade fehlgeschlagen');
+      this.gc.print('Parade fehlgeschlagen');
     }
   }
 }

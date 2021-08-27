@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { GetJsonService } from "./services/get-json.service";
-import { DiceService } from './services/dice.service';
 import { CommonChecksService } from './services/common-checks.service';
+import { DiceService } from './services/dice.service';
+import { ConsoleService } from './services/console.service';
+import { GetJsonService } from "./services/get-json.service";
 
 import { DisplayNscComponent } from './components/display-nsc/display-nsc.component';
 import { GameConsoleComponent } from './components/game-console/game-console.component';
@@ -25,9 +26,10 @@ import { GameConsoleComponent } from './components/game-console/game-console.com
     HttpClientModule
   ],
   providers: [
-    GetJsonService,
+    CommonChecksService,
+    ConsoleService,
     DiceService,
-    CommonChecksService
+    GetJsonService
   ],
   bootstrap: [AppComponent]
 })
