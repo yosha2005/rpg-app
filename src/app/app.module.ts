@@ -14,11 +14,14 @@ import { GetJsonService } from "./services/get-json.service";
 import { DisplayNscComponent } from './components/display-nsc/display-nsc.component';
 import { GameConsoleComponent } from './components/game-console/game-console.component';
 
+import { FormatDiceArrayPipe } from './pipes/format-dice-array.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     DisplayNscComponent,
-    GameConsoleComponent
+    GameConsoleComponent,
+    FormatDiceArrayPipe
   ],
   imports: [
     BrowserModule,
